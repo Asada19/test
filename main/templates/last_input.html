@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+
+{% for i in values %}
+  <div class="card">
+    <div class="card-body">
+      {{ i.value }}
+    </div>
+  </div>
+{% endfor %}
+
+{% endblock %}
