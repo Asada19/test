@@ -18,18 +18,18 @@
         </div>
         <button type="submit" class="btn btn-primary">Save</button>
     </form>
+
 </div>
+
 <div class="wrapper">
-    <div class="mb-3">
-        <button type="submit" class="btn btn-primary">Get word</button>
+        <div class="mb-3">
+        <button type="reset" class="btn btn-primary" onclick="location.href='{% url  "input_value" %}'">Get word</button>
     </div>
-    {% for i in values %}
-  <div class="card">
-    <div class="card-body">
-      {{ i.value }}
+    <div>
+        <div class="card">
+            <div class="card-body">{{ value }}</div>
+        </div>
     </div>
-  </div>
-{% endfor %}
 </div>
 </body>
 </html>
@@ -44,5 +44,11 @@
     align-items: center;
     justify-content: center;
     margin-top: 200px;
+    flex-direction: column;
+}
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 </style>
